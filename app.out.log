@@ -1,0 +1,204 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:sondeptraidemo >---------------------
+[INFO] Building sondeptraidemo 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.4.3:run (default-cli) > test-compile @ sondeptraidemo >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ sondeptraidemo ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 10 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ sondeptraidemo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ sondeptraidemo ---
+[INFO] Copying 1 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ sondeptraidemo ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:3.4.3:run (default-cli) < test-compile @ sondeptraidemo <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.4.3:run (default-cli) @ sondeptraidemo ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.3)
+
+2026-03-17T15:55:51.496+07:00  INFO 20032 --- [  restartedMain] c.e.s.SondeptraidemoApplication          : Starting SondeptraidemoApplication using Java 22.0.2 with PID 20032 (C:\demospingboots\sondeptraidemo\sondeptraidemo\target\classes started by admin in C:\demospingboots\sondeptraidemo\sondeptraidemo)
+2026-03-17T15:55:51.498+07:00  INFO 20032 --- [  restartedMain] c.e.s.SondeptraidemoApplication          : No active profile set, falling back to 1 default profile: "default"
+2026-03-17T15:55:51.670+07:00  INFO 20032 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-17T15:55:51.671+07:00  INFO 20032 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-17T15:55:52.150+07:00  INFO 20032 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-17T15:55:52.197+07:00  INFO 20032 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 4 JPA repository interfaces.
+2026-03-17T15:55:52.651+07:00  INFO 20032 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-17T15:55:52.663+07:00  INFO 20032 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-17T15:55:52.664+07:00  INFO 20032 --- [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-03-17T15:55:52.699+07:00  INFO 20032 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-17T15:55:52.701+07:00  INFO 20032 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1029 ms
+2026-03-17T15:55:52.811+07:00  INFO 20032 --- [  restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-17T15:55:52.848+07:00  INFO 20032 --- [  restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-03-17T15:55:52.871+07:00  INFO 20032 --- [  restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-17T15:55:53.076+07:00  INFO 20032 --- [  restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-17T15:55:53.099+07:00  INFO 20032 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-17T15:55:53.228+07:00  INFO 20032 --- [  restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5f572556
+2026-03-17T15:55:53.230+07:00  INFO 20032 --- [  restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-17T15:55:53.268+07:00  WARN 20032 --- [  restartedMain] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-03-17T15:55:53.283+07:00  INFO 20032 --- [  restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 5.5.5
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-03-17T15:55:54.002+07:00  INFO 20032 --- [  restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-17T15:55:54.077+07:00  INFO 20032 --- [  restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-17T15:55:54.258+07:00  INFO 20032 --- [  restartedMain] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-17T15:55:54.692+07:00  WARN 20032 --- [  restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-17T15:55:54.708+07:00  INFO 20032 --- [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name accountService
+2026-03-17T15:55:54.766+07:00  INFO 20032 --- [  restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-03-17T15:55:55.131+07:00  INFO 20032 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2026-03-17T15:55:55.172+07:00  INFO 20032 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-03-17T15:55:55.180+07:00  INFO 20032 --- [  restartedMain] c.e.s.SondeptraidemoApplication          : Started SondeptraidemoApplication in 4.014 seconds (process running for 4.336)
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        role r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        r1_0.id,
+        r1_0.name 
+    from
+        role r1_0 
+    where
+        r1_0.name=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.login_name,
+        a1_0.password 
+    from
+        account a1_0 
+    where
+        a1_0.login_name=?
+Hibernate: 
+    select
+        r1_0.account_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        account_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.login_name,
+        a1_0.password,
+        r1_0.account_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        account a1_0 
+    left join
+        account_role r1_0 
+            on a1_0.id=r1_0.account_id 
+    left join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        a1_0.id=?
+Hibernate: 
+    update
+        account 
+    set
+        login_name=?,
+        password=? 
+    where
+        id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.login_name,
+        a1_0.password 
+    from
+        account a1_0 
+    where
+        a1_0.login_name=?
+Hibernate: 
+    select
+        r1_0.account_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        account_role r1_0 
+    join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        r1_0.account_id=?
+Hibernate: 
+    select
+        a1_0.id,
+        a1_0.login_name,
+        a1_0.password,
+        r1_0.account_id,
+        r1_1.id,
+        r1_1.name 
+    from
+        account a1_0 
+    left join
+        account_role r1_0 
+            on a1_0.id=r1_0.account_id 
+    left join
+        role r1_1 
+            on r1_1.id=r1_0.role_id 
+    where
+        a1_0.id=?
+Hibernate: 
+    update
+        account 
+    set
+        login_name=?,
+        password=? 
+    where
+        id=?
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        upper(c1_0.name)=upper(?)
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.name 
+    from
+        category c1_0 
+    where
+        upper(c1_0.name)=upper(?)
+Hibernate: 
+    select
+        count(*) 
+    from
+        product p1_0

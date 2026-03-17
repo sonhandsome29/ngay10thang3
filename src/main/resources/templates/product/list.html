@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Product List</title>
+</head>
+<body>
+<div layout:fragment="content" class="container body-content">
+    <div th:if="${successMessage}" class="alert alert-success" th:text="${successMessage}"></div>
+    <div th:if="${errorMessage}" class="alert alert-danger" th:text="${errorMessage}"></div>
+
+    <a th:href="@{/products/add}" class="btn btn-primary btn-sm mb-3" sec:authorize="hasRole('ADMIN')">Create New Product</a>
+
+    <div class="table-responsive bg-white border rounded">
+        <table class="table table-striped mb-0 align-middle">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Image</th>
+                <th scope="col">Price</th>
+                <th scope="col">Category Name</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:if="${#lists.isEmpty(products)}">
+                <td colspan="6" class="text-center text-muted py-4">Chưa có sản phẩm nào.</td>
+            </tr>
+            <tr th:each="product, state : ${products}">
+                <th scope="row" th:text="${state.count}"></th>
+                <td th:text="${product.name}"></td>
+                <td>
+                    <img th:if="${product.image != null and !#strings.isEmpty(product.image)}"
+                         th:src="${product.image}" alt="Product Image"
+                         style="height:120px; width:150px; object-fit:cover; border-radius:4px;">
+                    <span th:if="${product.image == null or #strings.isEmpty(product.image)}" class="text-muted">No image</span>
+                </td>
+                <td th:text="${product.price}"></td>
+                <td th:text="${product.category != null ? product.category.name : ''}"></td>
+                <td>
+                    <div sec:authorize="hasRole('ADMIN')" class="d-flex gap-2">
+                        <a th:href="@{'/products/edit/' + ${product.id}}" class="btn btn-secondary btn-sm">Edit</a>
+                        <a th:href="@{'/products/delete/' + ${product.id}}"
+                           onclick="return confirm('Bạn có chắc muốn xóa sản phẩm này?')"
+                           class="btn btn-danger btn-sm">Delete</a>
+                    </div>
+                    <span sec:authorize="!hasRole('ADMIN')" class="text-muted">No permission</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>

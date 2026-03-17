@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Access Denied</title>
+</head>
+<body>
+<div layout:fragment="content" class="container body-content">
+    <div class="alert alert-danger">
+        Bạn không có quyền truy cập chức năng này.
+    </div>
+    <a class="btn btn-outline-secondary" th:href="@{/products}">Back to products</a>
+</div>
+</body>
+</html>
